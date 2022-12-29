@@ -11,7 +11,7 @@
    <httpBody></httpBody>
    <httpBodyContent>{
   &quot;text&quot;: &quot;{\n    \&quot;name\&quot;: \&quot;morpheus\&quot;,\n    \&quot;job\&quot;: \&quot;zion resident\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -20,7 +20,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
       <webElementGuid>589864bb-e944-4b59-8214-7bf16630ffd3</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.5.5</katalonVersion>
@@ -36,6 +36,20 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'morpheus'</defaultValue>
+      <description></description>
+      <id>1b1540af-d995-4a42-8287-d890189ae7ca</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>'zion resident'</defaultValue>
+      <description></description>
+      <id>2986c534-c118-455b-ba85-6fe9a0d8eee2</id>
+      <masked>false</masked>
+      <name>job</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

@@ -16,35 +16,23 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.ObjectMapper as ObjectMapper
 
 Result = WS.sendRequest(findTestObject('ResReqServices/Create'))
 
 WS.verifyResponseStatusCode(Result, 201)
 
-Name = WS.getElementPropertyValue(Result, 'name')
+HashMap<String, Object> responseText = new ObjectMapper().readValue(Result.getProperties().get('responseText'), HashMap.class)
 
-Job = WS.getElementPropertyValue(Result, 'job')
+WS.verifyEqual(true, responseText.containsKey('name'), FailureHandling.STOP_ON_FAILURE)
 
-Id = WS.getElementPropertyValue(Result, 'id')
+WS.verifyEqual(true, responseText.containsKey('job'), FailureHandling.STOP_ON_FAILURE)
 
-CreatedAt = WS.getElementPropertyValue(Result, 'createdAt')
+WS.verifyEqual(true, responseText.containsKey('id'), FailureHandling.STOP_ON_FAILURE)
 
-println('Result is: ' + Result)
+WS.verifyEqual(true, responseText.containsKey('createdAt'), FailureHandling.STOP_ON_FAILURE)
 
-GlobalVariable.name = Name
+WS.verifyElementPropertyValue(Result, 'name', responseText.get("name"))
 
-GlobalVariable.job = Job
-
-GlobalVariable.id = Id
-
-GlobalVariable.createdAt = CreatedAt
-
-WS.verifyElementPropertyValue(Result, 'name', GlobalVariable.name)
-
-WS.verifyElementPropertyValue(Result, 'job', GlobalVariable.job)
-
-WS.verifyElementPropertyValue(Result, 'id', GlobalVariable.id)
-
-WS.verifyElementPropertyValue(Result, 'createdAt', GlobalVariable.createdAt)
+WS.verifyElementPropertyValue(Result, 'job', responseText.get("job"))
 
