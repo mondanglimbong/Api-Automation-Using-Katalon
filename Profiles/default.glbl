@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://sample-web-service-aut.herokuapp.com'</initValue>
+      <initValue>'https://reqres.in'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,37 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>0</initValue>
-      <name>globalId</name>
+      <initValue>'https://reqres.in/#support-heading'</initValue>
+      <name>supportUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'To keep ReqRes free, contributions towards server costs are appreciated!'</initValue>
+      <name>supportText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Michael'</initValue>
+      <name>name</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'1'</initValue>
+      <name>id</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'2022-12-29T12:56:17.035Z'</initValue>
+      <name>createdAt</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'leader'</initValue>
+      <name>job</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'2022-12-29T13:07:26.064Z'</initValue>
+      <name>updatedAt</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
